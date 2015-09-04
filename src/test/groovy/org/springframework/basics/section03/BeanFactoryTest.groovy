@@ -1,5 +1,6 @@
 package org.springframework.basics.section03
 
+import org.springframework.aop.framework.AopContext
 import org.springframework.aop.framework.ProxyFactory
 import org.springframework.basics.section03.advice.SimpleMethodInterceptor
 import org.springframework.basics.section03.impl.SimpleService
@@ -15,6 +16,8 @@ class BeanFactoryTest extends Specification  {
             def service = new SimpleService()
 
             ProxyFactory factory = new ProxyFactory()
+
+
             factory.setTarget(service)
             factory.addInterface(IService)
             factory.addAdvice(new SimpleMethodInterceptor())
