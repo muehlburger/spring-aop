@@ -8,12 +8,6 @@ class SimpleMethodInterceptor implements MethodInterceptor {
 
     @Override
     Object invoke(MethodInvocation methodInvocation) throws Throwable {
-        def value = 4
-        try {
-            value = methodInvocation.proceed()
-        } catch (ignored){
-             //ignore
-        }
-        value
+       // TODO
     }
 }

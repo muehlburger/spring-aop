@@ -1,6 +1,7 @@
 package org.springframework.basics.section05
 
 import org.springframework.aop.framework.Advised
+import org.springframework.basics.section05.interfaces.IComponent
 import org.springframework.basics.section05.interfaces.IService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.ComponentScan
@@ -14,10 +15,14 @@ class AspectJProxyFactoryTest extends Specification  {
     @Autowired
     IService service
 
+    @Autowired
+    IComponent component
+
     def "Some fun with the AspectJ Prox Factory"() {
         expect:
             service.doSomeStuff(3)
             service instanceof Advised
+            component instanceof Advised == false
     }
 
     @Configuration

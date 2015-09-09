@@ -32,12 +32,8 @@ class JDKDynamicStyleProxyTest extends Specification  {
     @ComponentScan(basePackages="org.springframework.basics.section01")
     public static class TestConfiguration {
 
-        @Bean
-        @Primary
-        public IService jdkProxyService(){
-            return new JDKDynamicStyleProxyService()
-        }
-
+        // TODO Register the Proxy as bean
+        // Hint use @Primary
 
     }
 }

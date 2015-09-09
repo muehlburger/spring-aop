@@ -8,14 +8,14 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 
 
-@Component
-@Aspect
+// TODO Annotate
 class SimpleCacheAspect {
 
-    @Pointcut("execution(* getSophisticatedString(..))")
+    // TODO Annotate
     public void myPointcut(){}
 
-    @Around("org.springframework.basics.section06.aspect.SimpleCacheAspect.myPointcut()")
+
+    // TODO Annotate (reference Pointcut)
     public Object profile(ProceedingJoinPoint pjp) throws Throwable {
 
         "${pjp.proceed()}INTERCEPTED".toString()

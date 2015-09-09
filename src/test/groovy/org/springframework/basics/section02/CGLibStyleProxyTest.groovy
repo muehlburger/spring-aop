@@ -32,11 +32,8 @@ class CGLibStyleProxyTest extends Specification  {
     @ComponentScan(basePackages="org.springframework.basics.section02")
     public static class TestConfiguration {
 
-        @Bean
-        @Primary
-        public CGLibStyleProxyComponent cglibProxyComponent(){
-            return new CGLibStyleProxyComponent()
-        }
+        // TODO Register the Proxy as bean
+        // Hint use @Primary
 
     }
 }

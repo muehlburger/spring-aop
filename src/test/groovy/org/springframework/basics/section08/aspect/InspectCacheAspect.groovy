@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component
 
 @Aspect
 @Component
-@Order(value = 2)
+//TODO Do Ordering
 class InspectCacheAspect {
 
     @Around("execution(* doSomething(..))")

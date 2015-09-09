@@ -14,20 +14,15 @@ class SimpleCacheAspect {
     @Autowired
     MyCacheHolder cacheHolder
 
-    @Around("@annotation(org.springframework.basics.section07.annotation.MyCacheable) && args(capturedArgument)")
+    // TODO capture argument (args(capturedArgument)) and set joinpoint
     public Object profile(ProceedingJoinPoint pjp, String capturedArgument) throws Throwable {
 
         def cachedValue = cacheHolder.getCache().get(capturedArgument)
 
-        if (cachedValue != null) {
+        // TODO Implement Cache
 
-            return cachedValue
-        } else {
-            def returnValue = pjp.proceed()
-            String value = "${returnValue}CACHED"
-            cacheHolder.getCache().put(capturedArgument,value)
-            return returnValue
-        }
+
+        return null
 
     }
 
