@@ -6,6 +6,6 @@ class SimpleService implements IService{
 
     @Override
     int doSomeStuff(int someValue) {
-        return someValue
+        throw new RuntimeException()
     }
 }

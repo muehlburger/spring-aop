@@ -8,9 +8,12 @@ public class SimpleMethodInterceptor implements MethodInterceptor {
 
     @Override
     Object invoke(MethodInvocation methodInvocation) throws Throwable {
-        println "ksdfjksdfklg"
-        def method = methodInvocation.proceed();
-        println "ksdfjksdfklg"
-        method
+        def value = 4
+        try {
+            value = methodInvocation.proceed()
+        } catch (Exception){
+
+        }
+        value
     }
 }

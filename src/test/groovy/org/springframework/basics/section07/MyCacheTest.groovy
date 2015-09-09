@@ -11,7 +11,7 @@ import spock.lang.Specification
 import spock.lang.Unroll
 
 @ContextConfiguration(classes=TestConfiguration)
-class AspectJTest extends Specification  {
+class MyCacheTest extends Specification  {
 
     @Autowired
     CacheableService cacheableService
@@ -41,12 +41,4 @@ class AspectJTest extends Specification  {
 
     }
 
-    protected void intercept() {
-
-        MyCacheHolder.metaClass.getCache = { String name, args ->
-            println "mskdf"
-            def m = delegate.metaClass.getMetaMethod(name, *args)
-            (m ? m.invoke(delegate, *args) : delegate.metaClass.invokeMissingMethod(delegate, name, args))
-            }
-    }
 }

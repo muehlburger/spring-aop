@@ -12,7 +12,7 @@ import spock.lang.Unroll
 
 
 @ContextConfiguration(classes=TestConfiguration)
-class AspectJTest extends Specification  {
+class PointcutAndAdviseTest extends Specification  {
 
     @Autowired
     CacheableService cacheableService
