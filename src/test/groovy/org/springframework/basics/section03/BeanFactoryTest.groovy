@@ -14,14 +14,10 @@ class BeanFactoryTest extends Specification  {
         expect:
 
             def service = new SimpleService()
-
             ProxyFactory factory = new ProxyFactory()
-
-
             factory.setTarget(service)
             factory.addInterface(IService)
             factory.addAdvice(new SimpleMethodInterceptor())
-
             IService proxyService = (IService) factory.getProxy();
 
             println proxyService.doSomeStuff(3)

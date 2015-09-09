@@ -16,6 +16,7 @@ class AspectJProxyFactoryTest extends Specification  {
 
     def "Some fun with the AspectJ Prox Factory"() {
         expect:
+            service.doSomeStuff(3)
             service instanceof Advised
     }
 
