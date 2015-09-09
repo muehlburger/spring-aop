@@ -16,7 +16,7 @@ import spock.lang.Specification
 class JDKDynamicStyleProxyTest extends Specification  {
 
     public static final int INPUT = 3
-    public static final int EXPECTED = 18
+    public static final int EXPECTED = 24
 
     @Autowired
     IService someService

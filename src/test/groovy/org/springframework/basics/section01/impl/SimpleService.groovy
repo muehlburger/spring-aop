@@ -8,6 +8,6 @@ class SimpleService implements IService{
 
     @Override
     int doSomeStuff(int someValue) {
-        return someValue
+        return someValue+2
     }
 }
