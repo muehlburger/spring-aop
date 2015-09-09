@@ -10,7 +10,6 @@ class SimpleAspect {
     @Around("execution(* *.doSomeStuff(..))")
     public Object profile(ProceedingJoinPoint pjp) throws Throwable {
 
-        println "skldfklsdklf"
         pjp.proceed()
     }
 }

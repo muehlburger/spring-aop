@@ -4,15 +4,15 @@ import org.aopalliance.intercept.MethodInterceptor
 import org.aopalliance.intercept.MethodInvocation
 
 
-public class SimpleMethodInterceptor implements MethodInterceptor {
+class SimpleMethodInterceptor implements MethodInterceptor {
 
     @Override
     Object invoke(MethodInvocation methodInvocation) throws Throwable {
         def value = 4
         try {
             value = methodInvocation.proceed()
-        } catch (Exception){
-
+        } catch (ignored){
+             //ignore
         }
         value
     }
