@@ -21,7 +21,7 @@ public class AsyncBean {
         println Thread.currentThread().id
 
         Thread.sleep(1000)
-        return new Object();
+        return new Object()
     }
 
 }
