@@ -8,6 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 
 
+/**
+ * See: <a href="https://blog.espenberntsen.net/2010/03/20/aspectj-cheat-sheet/">aspectj-cheat-sheet</a>
+ *
+ */
 // TODO Annotate
 class SimpleCacheAspect {
 
