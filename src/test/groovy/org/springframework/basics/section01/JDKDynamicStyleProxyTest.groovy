@@ -4,6 +4,7 @@ import org.springframework.basics.section02.impl.CGLibStyleProxyComponent
 import org.springframework.basics.section01.impl.JDKDynamicStyleProxyService
 import org.springframework.basics.section01.interfaces.IService
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.ComponentScan
 import org.springframework.context.annotation.Configuration
@@ -19,8 +20,8 @@ class JDKDynamicStyleProxyTest extends Specification  {
     public static final int EXPECTED = 24
 
     @Autowired
+    @Qualifier("JDKDynamicStyleProxyService")
     IService someService
-
 
     def "do some proxy magic"() {
         expect:
