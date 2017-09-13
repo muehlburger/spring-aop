@@ -5,6 +5,7 @@ import org.springframework.basics.section01.impl.JDKDynamicStyleProxyService
 import org.springframework.basics.section01.interfaces.IService
 import org.springframework.basics.section02.impl.SimpleComponent
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.ComponentScan
 import org.springframework.context.annotation.Configuration
@@ -19,6 +20,7 @@ class CGLibStyleProxyTest extends Specification  {
     public static final int EXPECTED = 3
 
     @Autowired
+    @Qualifier("CGLibStyleProxyComponent")
     SimpleComponent someComponent
 
 
