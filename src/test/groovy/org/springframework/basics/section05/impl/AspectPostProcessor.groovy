@@ -16,7 +16,12 @@ class AspectPostProcessor implements BeanPostProcessor {
     @Override
     Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
 
-        // TODO Apply proxy for all Spring beans annotated with @Service
+        if(AnnotationUtils.findAnnotation(bean.class, Service)) {
+            AspectJProxyFactory factory = new AspectJProxyFactory(bean)
+            factory.addAspect(new SimpleAspect())
+            return factory.getProxy()
+        }
+        return bean;
 
     }
 

@@ -18,7 +18,7 @@ class AspectJProxyFactoryTest extends Specification  {
     @Autowired
     IComponent component
 
-    def "Some fun with the AspectJ Prox Factory"() {
+    def "Some fun with the AspectJ Proxy Factory"() {
         expect:
             service.doSomeStuff(3)
             service instanceof Advised
