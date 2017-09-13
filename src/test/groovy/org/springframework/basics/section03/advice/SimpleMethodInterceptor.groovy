@@ -8,6 +8,11 @@ class SimpleMethodInterceptor implements MethodInterceptor {
 
     @Override
     Object invoke(MethodInvocation methodInvocation) throws Throwable {
-       // TODO
+        try {
+            methodInvocation.proceed()
+        } catch (RuntimeException e) {
+            println(e.stackTrace)
+        }
+       return 4
     }
 }

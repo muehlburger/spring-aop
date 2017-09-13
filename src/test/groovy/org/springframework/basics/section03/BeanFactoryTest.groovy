@@ -17,6 +17,9 @@ class BeanFactoryTest extends Specification  {
             ProxyFactory factory = new ProxyFactory()
             // TODO configure the factory
 
+            factory.setTarget(service)
+            factory.addInterface(IService)
+            factory.addAdvice(new SimpleMethodInterceptor())
             IService proxyService = (IService) factory.getProxy();
             4 == proxyService.doSomeStuff(3)
     }
