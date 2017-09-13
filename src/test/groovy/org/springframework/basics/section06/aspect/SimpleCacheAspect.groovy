@@ -12,14 +12,14 @@ import org.springframework.stereotype.Component
  * See: <a href="https://blog.espenberntsen.net/2010/03/20/aspectj-cheat-sheet/">aspectj-cheat-sheet</a>
  *
  */
-// TODO Annotate
+@Component
+@Aspect
 class SimpleCacheAspect {
 
-    // TODO Annotate
-    public void myPointcut(){}
+    @Pointcut("execution(* getSophisticatedString(..))")
+    public void myPointcut() {}
 
-
-    // TODO Annotate (reference Pointcut)
+    @Around("org.springframework.basics.section06.aspect.SimpleCacheAspect.myPointcut()")
     public Object profile(ProceedingJoinPoint pjp) throws Throwable {
 
         "${pjp.proceed()}INTERCEPTED".toString()
