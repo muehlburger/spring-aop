@@ -4,11 +4,12 @@ import org.aopalliance.intercept.MethodInterceptor
 import org.aopalliance.intercept.MethodInvocation
 
 
-class SimpleMethodInterceptor implements MethodInterceptor {
+class SimpleMethodInterceptor2 implements MethodInterceptor {
 
     @Override
     Object invoke(MethodInvocation methodInvocation) throws Throwable {
-        println("SimpleMethodInterceptor")
+        println("SimpleMethodInterceptor2")
+
         try {
             methodInvocation.proceed()
         } catch (RuntimeException e) {
