@@ -8,6 +8,7 @@ class ScheduledBean {
 
     int timesCalled
 
+    @Scheduled(fixedRate = 1000L)
     public void scheduledMethod() {
         println "scheduled method"
         timesCalled++

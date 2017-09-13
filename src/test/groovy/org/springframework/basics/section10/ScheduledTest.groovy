@@ -21,6 +21,7 @@ class ScheduledTest extends Specification {
 
     @Configuration
     @ComponentScan("org.springframework.basics.section10")
+    @EnableScheduling
     public static class TestConfiguration {
     }
 
