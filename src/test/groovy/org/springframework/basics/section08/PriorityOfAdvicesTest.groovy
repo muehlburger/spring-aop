@@ -41,7 +41,7 @@ class PriorityOfAdvicesTest extends Specification  {
 
 
     @Configuration
-    //TODO Enable AspectJAutoProxy and Caching
+    @EnableAspectJAutoProxy
     @ComponentScan(basePackages="org.springframework.basics.section08")
     public static class TestConfiguration {
 
